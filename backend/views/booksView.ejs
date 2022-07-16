@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Uploading</title>
+  </head>
+
+  <body>
+    <h1>To Upload Image on mongoDB</h1>
+    <hr />
+    <div>
+      <form action="/api/books" method="POST" enctype="multipart/form-data">
+        <div>
+          <label for="title">Image Title</label>
+          <input
+            type="text"
+            id="title"
+            placeholder="Name"
+            value=""
+            name="title"
+            required
+          />
+        </div>
+        <div>
+          <label for="description">Image Description</label>
+          <textarea
+            id="description"
+            name="description"
+            value=""
+            rows="2"
+            placeholder="Description"
+            required
+          >
+          </textarea>
+        </div>
+        <div>
+          <label for="image">Upload Image</label>
+          <input type="file" id="image" name="image" value="" required />
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <hr />
+
+    <h1>Uploaded Images</h1>
+    <div>
+      <% items.forEach(function(book) { %>
+      <div>
+        <div>
+          <div>
+            <img
+              height="200"
+              src="data:book/<%=book.image.contentType%>;base64,
+                     <%=book.image.data.toString('base64')%>"
+            />
+            <h5><%= book.image %></h5>
+            <h5><%= book.title %></h5>
+
+            <p><%= book.description %></p>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+</html>
