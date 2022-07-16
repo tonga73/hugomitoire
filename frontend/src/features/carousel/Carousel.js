@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 export default function Carousel({ children, backgroundImage }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   return (
     <div className="overflow-x-hidden w-full">
       <div
         style={{
           backgroundImage: "url(" + backgroundImage[currentIndex] + ")",
         }}
-        className="bg-cover bg-no-repeat"
+        className="bg-cover bg-no-repeat bg-fixed"
       >
         <div className="grid grid-cols-12 gap-y-5 pt-16 pb-5 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
           <div className="col-span-5"></div>
