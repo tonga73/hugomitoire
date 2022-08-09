@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.font-cinzel {
+  font-family: Cinzel, serif;
+}
+.font-reggae  {
+  font-family: "Reggae One", cursive;
+}
+
 /*
 h1,
 h2,

@@ -10,15 +10,15 @@ export default function Home() {
   const list = [
     {
       content:
-        "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/vintage-book-cover-template-design-46e27bb5bb18d1354f5acc1d96454f60_screen.jpg?ts=1637015775",
+        "http://hugomitoire.com/mediafiles/portada_libros/image843_sRPPYgI.png",
       background:
-        "https://images.pexels.com/photos/1563356/pexels-photo-1563356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "http://hugomitoire.com/mediafiles/fondo_pantalla/bestiaBG.png",
     },
     {
       content:
-        "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/sci-fi-book-cover-template-a1ec26573b7a71617c38ffc6e356eef9_screen.jpg?ts=1636980113",
+        "https://3.bp.blogspot.com/-2c2apnDxqYg/Wl5xxIANt3I/AAAAAAAABmg/2KpyJ7bMFxYe3f0RK4ddfZN9yw4LbY0fACPcBGAYYCw/s1600/tapa%2Bsolo.jpg",
       background:
-        "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured.jpg?q=50&fit=contain&w=1500&h=750&dpr=1.5",
+        "https://4.bp.blogspot.com/-93js0rTvKhE/Wk1--MsAoEI/AAAAAAAABkk/8H4LoviWScweD8NhgKJuGZuefgjzN4IgQCPcBGAYYCw/s1600/chancha%2Bpag%2B016%2By%2B17.jpg",
     },
     {
       content:
@@ -29,12 +29,24 @@ export default function Home() {
   ];
 
   const cards = [
-    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/vintage-book-cover-template-design-fe1040a9952994208fcae6066ab78f2b_screen.jpg?ts=1636980773",
-    "https://i.pinimg.com/originals/f5/da/90/f5da901de158988c7825960c669c0078.jpg",
-    "https://t3.ftcdn.net/jpg/02/41/39/54/360_F_241395416_8RxWRj2Awl6nagPtU0PGeP6bac7fklIj.jpg",
-    "https://i.pinimg.com/originals/f5/da/90/f5da901de158988c7825960c669c0078.jpg",
-    "https://t3.ftcdn.net/jpg/02/41/39/54/360_F_241395416_8RxWRj2Awl6nagPtU0PGeP6bac7fklIj.jpg",
-    "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/vintage-book-cover-template-design-fe1040a9952994208fcae6066ab78f2b_screen.jpg?ts=1636980773",
+    {
+      title: "El mounstro del ropero",
+      type: "Cuento",
+      bgImg:
+        "https://1.bp.blogspot.com/-_uuyots-jVo/Wl9GdHiA4EI/AAAAAAAABqM/d535KAl50_4jRcWl3tapHWwIBf8JFd5ygCLcBGAs/s1600/La%2Bpuerta%2Bdel%2Bropero.jpg",
+    },
+    {
+      title: "El cuco",
+      type: "Cuento",
+      bgImg:
+        "https://4.bp.blogspot.com/-AtnuSAdwlZ8/Wl9GbyalWPI/AAAAAAAABp8/cOoivjQIuQUeKuIRDWFvTOk0ugCEQZIuACLcBGAs/s1600/El%2Bcuco.jpg",
+    },
+    {
+      title: "Criaturas Celestes: Un encuentro inesperado",
+      type: "Novela",
+      bgImg:
+        "http://4.bp.blogspot.com/-HZcfKBH2oX8/TaoW_Z7o4zI/AAAAAAAABAs/XCo1Oi2dsKw/s1600/C3+llegan+las+criaturas.jpg",
+    },
   ];
 
   return (
@@ -44,13 +56,20 @@ export default function Home() {
           {list.map((i) => i.content)}
         </Carousel>
       </div>
-      <div className="col-span-12 md:gap-y-20 py-5 container mx-auto grid grid-cols-2">
-        <div className="z-10 lg:col-span-1 md:col-span-2 grid gap-y-7 lg:grid-cols-3 md:grid-cols-3">
-          {cards.map((i, index) => {
+      <div className="col-span-12 md:gap-y-20 py-5 container mx-auto grid grid-cols-2 -translate-y-52 z-10">
+        <div className="z-10 lg:col-span-2 md:col-span-2 flex gap-3 justify-around px-32">
+          {cards.map((card, index) => {
             return (
-              <Card key={index}>
-                <img src={i} alt="" className="h-64" />
-              </Card>
+              <div className="flex justify-center first:first-of-type:col-start-1">
+                <Card backgroundImage={card.bgImg} key={index}>
+                  <div className="text-lg font-bold text-white px-5 font-cinzel">
+                    {card.type}
+                  </div>
+                  <div className="text-4xl font-bold text-white px-5 font-reggae">
+                    {card.title}
+                  </div>
+                </Card>
+              </div>
             );
           })}
         </div>
