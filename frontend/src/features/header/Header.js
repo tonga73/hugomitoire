@@ -30,10 +30,10 @@ export default function Header() {
     ];
     return (
       <>
-        <div className="sm:hidden lg:flex w-full text-white">
+        <div className="sm:hidden lg:flex w-full text-white text-opacity-70">
           <nav className="w-full grid grid-flow-col gap-1">
             {locations.map((e, index) => (
-              <div className="text-center px-1" key={v4()}>
+              <div className="font-reggae text-center px-1" key={v4()}>
                 {e.name}
               </div>
             ))}
@@ -72,10 +72,10 @@ export default function Header() {
   };
 
   return (
-    <header className="flex justify-center items-center dark:bg-gradient-to-b dark:from-neutral-900 hover:dark:bg-neutral-900 hover:transition-colors h-12 fixed z-50 w-full">
+    <header className="flex justify-center items-center dark:bg-gradient-to-b dark:from-neutral-900 hover:dark:bg-neutral-900 hover:transition-colors h-20 py-5 fixed z-50 w-full">
       <div className="container mx-auto grid grid-cols-7 items-center">
         <div className="col-span-2">{Navigation()}</div>
-        <div className="col-span-3 font-cinzel text-center text-3xl tracking-wider font-light uppercase dark:text-neutral-200 cursor-default select-none">
+        <div className="col-span-3 font-cinzel text-center text-5xl tracking-wider font-light uppercase dark:text-white cursor-default select-none">
           {Title()}
         </div>
         <div className="col-span-2 w-1/2 place-self-end self-center">

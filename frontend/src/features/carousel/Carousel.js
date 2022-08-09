@@ -11,11 +11,11 @@ export default function Carousel({ children, backgroundImage }) {
         }}
         className="bg-cover bg-no-repeat bg-fixed"
       >
-        <div className="grid grid-cols-12 gap-y-5 pt-16 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
+        <div className="grid grid-cols-12 gap-y-5 pt-24 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
           <div className="col-span-5"></div>
           <div className="col-span-4 flex justify-end items-center lg:translate-x-36 md:translate-x-10 rounded-lg">
             <img
-              className="rounded-lg 2xl:h-[51rem] lg:h-[30rem]"
+              className="rounded-lg 2xl:h-[48rem] lg:h-[30rem]"
               src={children[currentIndex]}
               alt=""
             />
@@ -24,7 +24,7 @@ export default function Carousel({ children, backgroundImage }) {
             {currentIndex < children.length - 1 ? (
               <img
                 onClick={() => setCurrentIndex(currentIndex + 1)}
-                className="2xl:h-[51rem] lg:h-[30rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
+                className="2xl:h-[48rem] lg:h-[30rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
                 src={children[currentIndex + 1]}
                 alt=""
               />

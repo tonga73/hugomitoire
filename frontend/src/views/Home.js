@@ -51,13 +51,13 @@ export default function Home() {
 
   return (
     <>
-      <div className="col-span-12 z-10">
+      <div className="col-span-12 z-10 mx-auto w-full">
         <Carousel backgroundImage={list.map((i) => i.background)}>
           {list.map((i) => i.content)}
         </Carousel>
       </div>
       <div className="col-span-12 md:gap-y-20 py-5 container mx-auto grid grid-cols-2 -translate-y-52 z-10">
-        <div className="z-10 lg:col-span-2 md:col-span-2 flex gap-3 justify-around px-32">
+        <div className="z-10 lg:col-span-2 md:col-span-2 flex gap-3 justify-around px-32 pb-14">
           {cards.map((card, index) => {
             return (
               <div className="flex justify-center first:first-of-type:col-start-1">
@@ -73,9 +73,7 @@ export default function Home() {
             );
           })}
         </div>
-        <div className="z-10 lg:col-span-1 md:col-span-2 grid md:gap-y-3">
-          <Banner />
-          <Banner />
+        <div className="z-10 px-12 lg:col-span-2 md:col-span-2 grid md:gap-y-3">
           <Banner />
         </div>
         <ParticlesDefault />
