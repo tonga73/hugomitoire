@@ -18,7 +18,7 @@ export default function Banner() {
           </h3>
           <h6 className="w-full dark:text-neutral-200 text-lg indent-1 py-7">
             Queremos ver todas las formas en que las historias y cuentos de Hugo
-            inspiran a los lectores para crear arte a partir de ello. ¿Haces
+            inspiran a sus lectores para crear arte a partir de ello. ¿Haces
             arte o conoces a alguien que lo haga? Pueden enviarnoslo a
             continuación.
           </h6>

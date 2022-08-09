@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import { v4 } from "node-uuid";
 
+import { SocialLinks } from "../socialLinks/SocialLinks";
+
 export default function Header() {
   const Navigation = () => {
     const locations = [
@@ -75,11 +77,11 @@ export default function Header() {
     <header className="flex justify-center items-center dark:bg-gradient-to-b dark:from-neutral-900 hover:dark:bg-neutral-900 hover:transition-colors h-20 py-5 fixed z-50 w-full">
       <div className="container mx-auto grid grid-cols-7 items-center">
         <div className="col-span-2">{Navigation()}</div>
-        <div className="col-span-3 font-cinzel text-center text-5xl tracking-wider font-light uppercase dark:text-white cursor-default select-none">
+        <div className="col-span-3 font-cinzel text-center text-5xl tracking-wider uppercase dark:text-white cursor-default select-none">
           {Title()}
         </div>
         <div className="col-span-2 w-1/2 place-self-end self-center">
-          {ExtraMenu()}
+          <SocialLinks />
         </div>
       </div>
     </header>

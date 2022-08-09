@@ -30,7 +30,7 @@ export default function Home() {
 
   const cards = [
     {
-      title: "El mounstro del ropero",
+      title: "La puerta del ropero",
       type: "Cuento",
       bgImg:
         "https://1.bp.blogspot.com/-_uuyots-jVo/Wl9GdHiA4EI/AAAAAAAABqM/d535KAl50_4jRcWl3tapHWwIBf8JFd5ygCLcBGAs/s1600/La%2Bpuerta%2Bdel%2Bropero.jpg",
