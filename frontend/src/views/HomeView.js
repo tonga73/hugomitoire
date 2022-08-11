@@ -1,12 +1,14 @@
 import React from "react";
 
+import { v4 } from "node-uuid";
+
 import Carousel from "../features/carousel/Carousel";
 import Card from "../features/card/Card";
 import Banner from "../features/banner/Banner";
 
 import { ParticlesDefault } from "../commons/utils/particles/ParticlesDefault";
 
-export default function HomePage() {
+export function HomeView() {
   const list = [
     {
       content:
@@ -60,7 +62,10 @@ export default function HomePage() {
         <div className="z-10 lg:col-span-2 md:col-span-2 flex gap-3 justify-around px-32 pb-14">
           {cards.map((card, index) => {
             return (
-              <div className="flex justify-center first:first-of-type:col-start-1">
+              <div
+                key={v4()}
+                className="flex justify-center first:first-of-type:col-start-1"
+              >
                 <Card backgroundImage={card.bgImg} key={index}>
                   <div className="text-lg font-bold text-white px-5 font-cinzel">
                     {card.type}

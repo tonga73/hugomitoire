@@ -1,5 +1,7 @@
 import React from "react";
 
+import { v4 } from "node-uuid";
+
 export function SocialLinks() {
   const links = [
     {
@@ -12,15 +14,18 @@ export function SocialLinks() {
       icon: "youtube",
     },
     {
-      icon: "youtube",
+      icon: "email",
     },
   ];
   return (
     <nav className="grid grid-cols-4 gap-2">
       {links.map((link) => {
         return (
-          <button className="opacity-70 place-self-center h-7 w-7">
-            <img className="" src={`img/icons/${link.icon}.png`} alt="" />
+          <button
+            key={v4()}
+            className="opacity-70 hover:opacity-100 place-self-center h-7 w-7"
+          >
+            <img className="" src={`icons/social/${link.icon}.svg`} alt="" />
           </button>
         );
       })}

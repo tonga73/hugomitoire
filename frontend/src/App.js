@@ -8,7 +8,7 @@ import MainLayout from "./layouts/MainLayout";
 
 // VIEWS
 import AdminView from "./views/AdminView";
-import HomeView from "./views/HomeView";
+import { HomeView } from "./views/HomeView";
 import NewBook from "./views/NewBook";
 
 function App() {
