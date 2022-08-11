@@ -6,7 +6,7 @@ import Banner from "../features/banner/Banner";
 
 import { ParticlesDefault } from "../commons/utils/particles/ParticlesDefault";
 
-export default function Home() {
+export default function HomePage() {
   const list = [
     {
       content:

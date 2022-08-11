@@ -6,7 +6,7 @@ export default function Banner() {
       style={{
         backgroundImage: "url(img/fanArt.png)",
       }}
-      className="h-[36rem] w-full gap-3 bg-contain bg-right bg-no-repeat"
+      className="2xl:h-[36rem] xl:h-[32rem] xl:mt-10 w-full gap-3 bg-contain bg-right bg-no-repeat"
     >
       <div className="h-full w-full flex gap-3 items-center bg-gradient-to-r from-neutral-900">
         <div className="w-1/3 text-right overflow-hidden translate-x-16">

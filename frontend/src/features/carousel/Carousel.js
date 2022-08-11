@@ -11,20 +11,30 @@ export default function Carousel({ children, backgroundImage }) {
         }}
         className="bg-cover bg-no-repeat bg-fixed"
       >
-        <div className="grid grid-cols-12 gap-y-5 pt-24 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
-          <div className="col-span-5"></div>
-          <div className="col-span-4 flex justify-end items-center lg:translate-x-36 md:translate-x-10 rounded-lg">
+        <div className="mx-auto grid grid-cols-12 gap-y-5 pt-24 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
+          <div className="col-span-5 grid gap-10 pl-44 py-3 text-white text-right  2xl:translate-x-36">
+            <div className="font-cinzel text-xl font-bold">Novela</div>
+            <div className="font-reggae text-6xl">La Bestia</div>
+            <div className="text-xl font-semibold pl-44">
+              Un niño nace con la marca de la bestia. Ha venido desde las
+              tinieblas y tiene la protección del Diablo.{" "}
+            </div>
+            <button className="w-1/2 place-self-end bg-violet-700 px-5 py-3 uppercase font-bold text-neutral-200 rounded-full">
+              Ver Libro
+            </button>
+          </div>
+          <div className="col-span-4 flex justify-end items-center xl:translate-x-36 lg:translate-x-36 md:translate-x-10 rounded-lg">
             <img
-              className="rounded-lg 2xl:h-[48rem] lg:h-[30rem]"
+              className="rounded-lg 2xl:h-[48rem] lg:h-[28rem]"
               src={children[currentIndex]}
               alt=""
             />
           </div>
-          <div className="col-span-3 lg:translate-x-36 md:translate-x-10">
+          <div className="col-span-3 xl:translate-x-36 lg:translate-x-36 md:translate-x-10">
             {currentIndex < children.length - 1 ? (
               <img
                 onClick={() => setCurrentIndex(currentIndex + 1)}
-                className="2xl:h-[48rem] lg:h-[30rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
+                className="2xl:h-[48rem] lg:h-[28rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
                 src={children[currentIndex + 1]}
                 alt=""
               />

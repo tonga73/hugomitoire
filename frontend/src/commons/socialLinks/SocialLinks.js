@@ -11,6 +11,9 @@ export function SocialLinks() {
     {
       icon: "youtube",
     },
+    {
+      icon: "youtube",
+    },
   ];
   return (
     <nav className="grid grid-cols-4 gap-2">

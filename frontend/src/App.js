@@ -7,18 +7,18 @@ import AdminLayout from "./layouts/AdminLayout";
 import MainLayout from "./layouts/MainLayout";
 
 // VIEWS
-import Admin from "./views/Admin";
-import Home from "./views/Home";
+import AdminView from "./views/AdminView";
+import HomeView from "./views/HomeView";
 import NewBook from "./views/NewBook";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
+        <Route index element={<HomeView />} />
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
-        <Route index element={<Admin />} />
+        <Route index element={<AdminView />} />
         <Route path="new-book" element={<NewBook />} />
       </Route>
     </Routes>
