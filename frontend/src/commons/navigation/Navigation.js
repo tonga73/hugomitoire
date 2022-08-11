@@ -27,11 +27,15 @@ export function Navigation({ styles }) {
     },
   ];
   return (
-    <nav className={`${styles}`}>
+    <nav
+      className={`${
+        styles ? styles : "w-full grid grid-flow-col gap-1 text-center"
+      }`}
+    >
       {locations.map((e, index) => (
         <Link
           to={e.path}
-          className="font-reggae text-center px-1 text-white text-opacity-70 hover:text-opacity-100"
+          className="font-reggae px-1 text-white text-opacity-70 hover:text-opacity-100"
           key={v4()}
         >
           {e.name}

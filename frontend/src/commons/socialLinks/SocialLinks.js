@@ -22,10 +22,15 @@ export function SocialLinks() {
       {links.map((link) => {
         return (
           <button
+            type="button"
             key={v4()}
-            className="opacity-70 hover:opacity-100 place-self-center h-7 w-7"
+            className="opacity-70 hover:opacity-100 h-7 w-7"
           >
-            <img className="" src={`icons/social/${link.icon}.svg`} alt="" />
+            <img
+              className="mx-auto"
+              src={`icons/social/${link.icon}.svg`}
+              alt=""
+            />
           </button>
         );
       })}

@@ -38,7 +38,7 @@ export default function Header() {
   return (
     <>
       <Drawer openLeft={drawerLeft}>
-        <Navigation styles="grid grid-flow-row gap-5 text-xl py-10 " />
+        <Navigation styles="grid grid-flow-row gap-5 text-xl py-5 px-7" />
       </Drawer>
       <header
         className={`flex lg:justify-center items-center transition-all duration-700 h-20 fixed z-20 w-full hover:dark:bg-neutral-900 ${
@@ -63,9 +63,9 @@ export default function Header() {
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M10 19l-7-7m0 0l7-7m-7 7h18"
                 ></path>
               </svg>
@@ -90,7 +90,7 @@ export default function Header() {
         </div>
         <div className="container mx-auto hidden items-center lg:grid lg:grid-cols-7">
           <div className="col-span-2">
-            <Navigation styles="w-full grid grid-flow-col gap-1" />
+            <Navigation styles="w-full grid grid-flow-col gap-1 text-center" />
           </div>
           <div className="col-span-3 font-cinzel text-center text-5xl tracking-wider uppercase dark:text-white cursor-default select-none">
             {Title()}
