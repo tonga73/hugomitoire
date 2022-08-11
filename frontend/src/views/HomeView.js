@@ -53,18 +53,18 @@ export function HomeView() {
 
   return (
     <>
-      <div className="col-span-12 z-10 mx-auto w-full">
+      <div className="col-span-12 z-10 mx-auto w-full overflow-x-hidden">
         <Carousel backgroundImage={list.map((i) => i.background)}>
           {list.map((i) => i.content)}
         </Carousel>
       </div>
       <div className="col-span-12 md:gap-y-20 py-5 container mx-auto grid grid-cols-2 -translate-y-52 z-10">
-        <div className="z-10 lg:col-span-2 md:col-span-2 flex gap-3 justify-around px-32 pb-14">
+        <div className="z-10 lg:col-span-2 md:col-span-2 col-span-2 grid lg:grid-flow-col gap-3 justify-around lg:px-32 pb-14">
           {cards.map((card, index) => {
             return (
               <div
                 key={v4()}
-                className="flex justify-center first:first-of-type:col-start-1"
+                className="flex justify-center lg:first:first-of-type:col-start-1"
               >
                 <Card backgroundImage={card.bgImg} key={index}>
                   <div className="text-lg font-bold text-white px-5 font-cinzel">
@@ -78,7 +78,7 @@ export function HomeView() {
             );
           })}
         </div>
-        <div className="z-10 px-12 lg:col-span-2 md:col-span-2 grid md:gap-y-3">
+        <div className="z-10 col-span-2 md:gap-y-3">
           <Banner />
         </div>
         <ParticlesDefault />

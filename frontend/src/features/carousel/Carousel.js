@@ -11,8 +11,8 @@ export default function Carousel({ children, backgroundImage }) {
         }}
         className="bg-cover bg-no-repeat bg-fixed"
       >
-        <div className="mx-auto grid grid-cols-12 gap-y-5 pt-24 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
-          <div className="col-span-5 grid gap-10 pl-44 py-3 text-white text-right  2xl:translate-x-36">
+        <div className="mx-auto grid grid-cols-12 lg:gap-y-5 gap-y-3 pt-24 pb-52 items-center bg-gradient-to-t from-neutral-900 border-b-8 border-b-neutral-900">
+          <div className="order-last lg:order-first col-span-12 2xl:col-span-5 xl:col-span-6 lg:col-span-5 grid lg:gap-10 gap-5 lg:pl-44 py-3 px-3 lg:px-0 text-white text-right 2xl:translate-x-36">
             <div className="font-cinzel text-xl font-bold">Novela</div>
             <div className="font-reggae text-6xl">La Bestia</div>
             <div className="text-xl font-semibold pl-44">
@@ -23,18 +23,18 @@ export default function Carousel({ children, backgroundImage }) {
               Ver Libro
             </button>
           </div>
-          <div className="col-span-4 flex justify-end items-center xl:translate-x-36 lg:translate-x-36 md:translate-x-10 rounded-lg">
+          <div className="col-span-7 col-end-9 2xl:col-span-4 xl:col-span-3 lg:col-span-4 flex justify-end items-center 2xl:translate-x-36 xl:translate-x-32 lg:translate-x-36 md:translate-x-10 translate-x-16 rounded-lg">
             <img
-              className="rounded-lg 2xl:h-[48rem] lg:h-[28rem]"
+              className="rounded-lg 2xl:h-[48rem] lg:h-[29rem]"
               src={children[currentIndex]}
               alt=""
             />
           </div>
-          <div className="col-span-3 xl:translate-x-36 lg:translate-x-36 md:translate-x-10">
+          <div className="col-span-4 2xl:col-span-3 xl:col-span-3 lg:col-span-3 2xl:translate-x-36 xl:translate-x-32 lg:translate-x-36 md:translate-x-10 translate-x-16">
             {currentIndex < children.length - 1 ? (
               <img
                 onClick={() => setCurrentIndex(currentIndex + 1)}
-                className="2xl:h-[48rem] lg:h-[28rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
+                className="2xl:h-[48rem] lg:h-[29rem] cursor-pointer opacity-50 hover:opacity-90 scale-90 hover:scale-95 transition-transform duration-500 rounded-lg"
                 src={children[currentIndex + 1]}
                 alt=""
               />
